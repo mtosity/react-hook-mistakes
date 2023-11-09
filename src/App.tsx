@@ -10,10 +10,9 @@ function App() {
         <p>{order.join(", ")}</p>
         <button
           onClick={() => {
-            const newOrder = [...order];
-            newOrder.push("Egg");
-
-            setOrder(newOrder); // This will not work, because React will not detect the change,
+            order.push("Egg");
+            console.log(order);
+            setOrder(order); // This will not work, because React will not detect the change,
             // since the array is the same reference, even though the content is different
           }}
         >
