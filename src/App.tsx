@@ -1,8 +1,8 @@
 import "./App.css";
-import { Example1 } from "./example/1";
+import { Example5 } from "./example/5";
 
 function App() {
-  return <Example1 />;
+  return <Example5 />;
 }
 
 export default App;
