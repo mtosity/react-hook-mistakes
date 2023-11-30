@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function ChatRoom() {
   const [message, setMessage] = useState("");
 
-  const createRoom = useCallback(() => {
+  const createRoom = () => {
     // 🚩 This function is created from scratch on every re-render
     const roomId = Math.random();
     return {
@@ -11,7 +11,7 @@ function ChatRoom() {
       roomId: roomId,
       message: "Welcome to the chat room " + roomId + "!",
     };
-  }, []);
+  };
 
   useEffect(() => {
     const room = createRoom(); // It's used inside the Effect
